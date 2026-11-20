@@ -1,0 +1,1580 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eeuss影院日韩_影迷影像社区|官方品牌视频门户</title>
+<meta name="description" content="eeuss影院日韩官方网站，专注日韩影像内容的品牌视频门户，汇聚原创精品内容、创作者社区与企业动态，为影迷提供高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318233a'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23ffcf5c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ek-navy:#161f36;
+  --ek-navy-2:#1f2b4a;
+  --ek-ink:#26304a;
+  --ek-sakura:#ffb7c5;
+  --ek-sakura-deep:#f27a96;
+  --ek-gold:#ffcf5c;
+  --ek-mist:#f4f6fb;
+  --ek-line:#dfe4ef;
+  --ek-white:#ffffff;
+  --ek-grey:#6b7690;
+  --ek-soft:#eef1f8;
+  --ek-radius:16px;
+  --ek-shadow:0 12px 34px rgba(22,31,54,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ek-ink);
+  background:var(--ek-mist);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.ek-wrap{width:min(1180px,92vw);margin:0 auto}
+.ek-anchor{scroll-margin-top:128px}
+
+/* ===== 吸顶区：公告条 + 页头 ===== */
+.ek-sticky{position:sticky;top:0;z-index:90}
+.ek-announce{
+  background:linear-gradient(90deg,var(--ek-navy) 0%,var(--ek-navy-2) 60%,#2a3a63 100%);
+  color:#e8ecf8;
+  font-size:13px;
+  padding:9px 0;
+  overflow:hidden;
+}
+.ek-announce__inner{display:flex;align-items:center;gap:14px;width:min(1180px,92vw);margin:0 auto}
+.ek-announce__tag{
+  flex:none;background:var(--ek-sakura-deep);color:#fff;font-weight:700;
+  padding:2px 10px;border-radius:999px;font-size:12px;letter-spacing:.5px;
+}
+.ek-announce__list{display:flex;gap:34px;white-space:nowrap;overflow:hidden;flex:1}
+.ek-announce__item{opacity:.92}
+.ek-announce__item b{color:var(--ek-gold);font-weight:600}
+.ek-announce__more{flex:none;font-size:12px;color:var(--ek-sakura);border-bottom:1px dashed rgba(255,183,197,.5)}
+
+.ek-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ek-line);
+  box-shadow:0 4px 18px rgba(22,31,54,.05);
+}
+.ek-header__inner{display:flex;align-items:center;gap:22px;height:70px}
+.ek-logo{display:flex;align-items:center;gap:10px;flex:none}
+.ek-logo__mark{
+  width:42px;height:42px;border-radius:12px;background:var(--ek-navy);
+  display:grid;place-items:center;box-shadow:0 6px 16px rgba(22,31,54,.28);
+}
+.ek-logo__mark svg{width:20px;height:20px}
+.ek-logo__text{display:flex;flex-direction:column;line-height:1.15}
+.ek-logo__name{font-size:17px;font-weight:800;letter-spacing:.4px;color:var(--ek-navy)}
+.ek-logo__sub{font-size:10px;color:var(--ek-grey);letter-spacing:2px}
+.ek-nav{display:flex;gap:4px;flex:1;margin-left:6px}
+.ek-nav__link{
+  padding:8px 14px;border-radius:10px;font-size:14.5px;color:var(--ek-ink);
+  font-weight:500;transition:background .2s,color .2s;
+}
+.ek-nav__link:hover{background:var(--ek-soft);color:var(--ek-sakura-deep)}
+.ek-nav__link.is-active{background:var(--ek-navy);color:#fff}
+.ek-header__right{display:flex;align-items:center;gap:12px}
+.ek-search{position:relative;display:flex;align-items:center}
+.ek-search__input{
+  width:210px;height:40px;border-radius:999px;border:1px solid var(--ek-line);
+  background:var(--ek-soft);padding:0 40px 0 16px;font-size:13.5px;outline:none;
+  transition:border-color .2s,background .2s,width .25s;
+}
+.ek-search__input:focus{border-color:var(--ek-sakura-deep);background:#fff;width:250px}
+.ek-search__btn{
+  position:absolute;right:6px;width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;background:var(--ek-sakura-deep);color:#fff;
+}
+.ek-search__btn svg{width:14px;height:14px}
+.ek-search__hint{
+  position:absolute;top:46px;left:0;right:0;background:#fff;border:1px solid var(--ek-line);
+  border-radius:12px;box-shadow:var(--ek-shadow);padding:8px;font-size:13px;
+  display:none;z-index:20;
+}
+.ek-search__hint.is-open{display:block}
+.ek-search__hint li{padding:6px 10px;border-radius:8px;color:var(--ek-ink);cursor:pointer}
+.ek-search__hint li:hover{background:var(--ek-soft);color:var(--ek-sakura-deep)}
+.ek-search__hint li span{color:var(--ek-grey);font-size:12px;margin-left:6px}
+.ek-btn{
+  display:inline-flex;align-items:center;gap:7px;border-radius:999px;
+  padding:10px 20px;font-size:14px;font-weight:600;transition:transform .18s,box-shadow .18s,background .2s;
+}
+.ek-btn:hover{transform:translateY(-1px)}
+.ek-btn--primary{background:var(--ek-navy);color:#fff;box-shadow:0 8px 20px rgba(22,31,54,.24)}
+.ek-btn--sakura{background:linear-gradient(135deg,var(--ek-sakura-deep),#ff9db3);color:#fff;box-shadow:0 8px 20px rgba(242,122,150,.32)}
+.ek-btn--ghost{border:1px solid var(--ek-line);color:var(--ek-navy);background:#fff}
+.ek-btn--ghost:hover{border-color:var(--ek-sakura-deep);color:var(--ek-sakura-deep)}
+.ek-burger{display:none;width:42px;height:42px;border-radius:10px;background:var(--ek-soft);place-items:center}
+.ek-burger svg{width:20px;height:20px;color:var(--ek-navy)}
+
+/* ===== 首屏 ===== */
+.ek-hero{position:relative;padding:56px 0 64px;overflow:hidden;background:linear-gradient(160deg,#101828 0%,#1d2a4a 52%,#2c3d68 100%)}
+.ek-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(680px 320px at 82% 12%,rgba(255,183,197,.22),transparent 70%),
+    radial-gradient(520px 280px at 8% 92%,rgba(255,207,92,.14),transparent 70%);
+  pointer-events:none;
+}
+.ek-hero__grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.ek-hero__eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.6px;
+  color:var(--ek-gold);border:1px solid rgba(255,207,92,.4);border-radius:999px;
+  padding:5px 14px;margin-bottom:20px;background:rgba(255,207,92,.08);
+}
+.ek-hero__eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--ek-gold);display:inline-block}
+.ek-hero h1{
+  font-size:clamp(40px,5.2vw,64px);line-height:1.1;color:#fff;letter-spacing:1px;
+  font-weight:900;margin-bottom:16px;
+}
+.ek-hero h1 em{
+  font-style:normal;color:transparent;
+  background:linear-gradient(120deg,var(--ek-sakura) 0%,var(--ek-gold) 100%);
+  -webkit-background-clip:text;background-clip:text;
+}
+.ek-hero__slogan{font-size:19px;color:#dfe5f5;font-weight:600;margin-bottom:14px}
+.ek-hero__desc{color:#aeb9d4;font-size:14.8px;line-height:1.95;margin-bottom:26px;max-width:560px}
+.ek-hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.ek-hero__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px}
+.ek-stat{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;padding:14px 16px;backdrop-filter:blur(6px);
+}
+.ek-stat__num{font-size:26px;font-weight:800;color:var(--ek-gold);line-height:1.2;font-variant-numeric:tabular-nums}
+.ek-stat__num small{font-size:13px;color:#cfd7eb;margin-left:2px;font-weight:600}
+.ek-stat__label{font-size:12px;color:#9faccc;margin-top:2px}
+.ek-hero__visual{position:relative}
+.ek-hero__frame{
+  position:relative;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 70px rgba(0,0,0,.45);
+  aspect-ratio:16/11;background:#0f1729;
+}
+.ek-hero__frame img{width:100%;height:100%;object-fit:cover}
+.ek-hero__chip{
+  position:absolute;background:rgba(16,24,40,.78);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:9px 14px;
+  color:#fff;font-size:12.5px;display:flex;align-items:center;gap:8px;
+}
+.ek-hero__chip--tl{top:16px;left:16px}
+.ek-hero__chip--br{bottom:16px;right:16px}
+.ek-hero__chip b{color:var(--ek-gold)}
+.ek-dot-live{width:7px;height:7px;border-radius:50%;background:#5be49b;box-shadow:0 0 0 4px rgba(91,228,155,.2)}
+
+/* ===== 通用 section 头 ===== */
+.ek-section{padding:72px 0}
+.ek-section--alt{background:#fff}
+.ek-sec-head{margin-bottom:36px;max-width:820px}
+.ek-sec-head__tag{
+  display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:1.4px;
+  color:var(--ek-sakura-deep);background:rgba(242,122,150,.10);
+  border-radius:999px;padding:4px 14px;margin-bottom:12px;
+}
+.ek-sec-head h2{font-size:clamp(24px,3vw,32px);color:var(--ek-navy);font-weight:800;line-height:1.3;letter-spacing:.4px}
+.ek-sec-head p{color:var(--ek-grey);font-size:14.5px;margin-top:10px;line-height:1.9}
+
+/* ===== 焦点视频 ===== */
+.ek-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px}
+.ek-card{
+  background:#fff;border:1px solid var(--ek-line);border-radius:var(--ek-radius);
+  overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.ek-card:hover{transform:translateY(-4px);box-shadow:var(--ek-shadow);border-color:#cbd4e8}
+.ek-cover{position:relative;overflow:hidden;background:#e9edf6}
+.ek-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.ek-card:hover .ek-cover img{transform:scale(1.045)}
+.ek-cover--169{aspect-ratio:16/9}
+.ek-cover__badge{
+  position:absolute;top:12px;left:12px;background:rgba(22,31,54,.86);color:#fff;
+  font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:999px;letter-spacing:.5px;
+}
+.ek-cover__badge--sakura{background:var(--ek-sakura-deep)}
+.ek-cover__play{
+  position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .25s;
+  background:linear-gradient(180deg,rgba(16,24,40,0) 30%,rgba(16,24,40,.55) 100%);
+}
+.ek-card:hover .ek-cover__play{opacity:1}
+.ek-cover__play span{
+  width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.94);
+  display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.35);
+}
+.ek-cover__play svg{width:20px;height:20px;color:var(--ek-navy);margin-left:3px}
+.ek-cover__meta{
+  position:absolute;bottom:10px;right:12px;background:rgba(16,24,40,.8);
+  color:#fff;font-size:11.5px;padding:2px 8px;border-radius:6px;
+}
+.ek-card__body{padding:16px 18px 18px}
+.ek-card__title{font-size:16.5px;font-weight:700;color:var(--ek-navy);line-height:1.45;margin-bottom:8px}
+.ek-card--hero .ek-card__title{font-size:22px}
+.ek-card__desc{font-size:13.5px;color:var(--ek-grey);line-height:1.8;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ek-card__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.ek-tag{font-size:11.5px;padding:2px 10px;border-radius:999px;background:var(--ek-soft);color:#4d5a78;font-weight:500}
+.ek-tag--sakura{background:rgba(242,122,150,.12);color:var(--ek-sakura-deep)}
+.ek-card__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px dashed var(--ek-line);padding-top:11px}
+.ek-author-mini{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ek-grey)}
+.ek-avatar{
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-size:12px;font-weight:700;flex:none;
+}
+.ek-actions{display:flex;gap:6px}
+.ek-act{
+  display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--ek-grey);
+  padding:4px 9px;border-radius:999px;transition:background .2s,color .2s;
+}
+.ek-act:hover{background:var(--ek-soft);color:var(--ek-navy)}
+.ek-act svg{width:14px;height:14px}
+.ek-act.is-liked{color:var(--ek-sakura-deep)}
+.ek-act.is-liked svg{fill:var(--ek-sakura-deep)}
+.ek-act.is-saved{color:#e0a800}
+.ek-act.is-saved svg{fill:#e0a800}
+
+.ek-focus-side{display:grid;grid-template-columns:1fr;gap:16px;align-content:start}
+.ek-card--sm{display:grid;grid-template-columns:132px 1fr;gap:0}
+.ek-card--sm .ek-cover{aspect-ratio:auto;height:100%;min-height:104px}
+.ek-card--sm .ek-card__body{padding:12px 14px}
+.ek-card--sm .ek-card__title{font-size:14.5px;margin-bottom:6px}
+.ek-card--sm .ek-card__desc{-webkit-line-clamp:2;font-size:12.5px;margin-bottom:6px}
+.ek-card--sm .ek-card__tags{margin-bottom:0}
+
+/* ===== 视频流 ===== */
+.ek-stream{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ek-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.ek-filter__btn{
+  font-size:13px;padding:7px 16px;border-radius:999px;border:1px solid var(--ek-line);
+  background:#fff;color:#495573;font-weight:500;transition:all .2s;
+}
+.ek-filter__btn:hover{border-color:var(--ek-sakura-deep);color:var(--ek-sakura-deep)}
+.ek-filter__btn.is-on{background:var(--ek-navy);border-color:var(--ek-navy);color:#fff}
+.ek-card.is-hide{display:none}
+
+/* ===== 专题 ===== */
+.ek-topic{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ek-topic__item{
+  position:relative;border-radius:var(--ek-radius);overflow:hidden;min-height:230px;
+  display:flex;flex-direction:column;justify-content:flex-end;color:#fff;
+  transition:transform .22s,box-shadow .22s;
+}
+.ek-topic__item:hover{transform:translateY(-4px);box-shadow:var(--ek-shadow)}
+.ek-topic__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ek-topic__item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(16,24,40,.05) 20%,rgba(16,24,40,.86) 100%);
+}
+.ek-topic__body{position:relative;padding:18px;z-index:1}
+.ek-topic__state{
+  display:inline-block;font-size:11px;font-weight:600;border-radius:999px;
+  padding:2px 10px;background:rgba(255,207,92,.2);color:var(--ek-gold);
+  border:1px solid rgba(255,207,92,.45);margin-bottom:8px;
+}
+.ek-topic__item h3{font-size:16.5px;font-weight:700;margin-bottom:6px;line-height:1.4}
+.ek-topic__item p{font-size:12.5px;color:#cfd7ea;line-height:1.7}
+.ek-topic__item--wide{grid-column:span 2}
+
+/* ===== 创作者 ===== */
+.ek-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ek-creator{
+  background:#fff;border:1px solid var(--ek-line);border-radius:var(--ek-radius);
+  padding:22px 18px;text-align:center;transition:transform .22s,box-shadow .22s;
+}
+.ek-creator:hover{transform:translateY(-4px);box-shadow:var(--ek-shadow)}
+.ek-creator__avatar{
+  width:66px;height:66px;border-radius:22px;margin:0 auto 12px;display:grid;place-items:center;
+  color:#fff;font-size:22px;font-weight:800;box-shadow:0 10px 22px rgba(22,31,54,.18);
+}
+.ek-creator__name{font-size:15.5px;font-weight:700;color:var(--ek-navy);margin-bottom:4px}
+.ek-creator__field{font-size:12px;color:var(--ek-sakura-deep);font-weight:600;margin-bottom:10px}
+.ek-creator__bio{font-size:12.8px;color:var(--ek-grey);line-height:1.75;min-height:64px}
+.ek-creator__nums{display:flex;justify-content:center;gap:16px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--ek-line)}
+.ek-creator__nums div{font-size:11.5px;color:var(--ek-grey)}
+.ek-creator__nums b{display:block;font-size:15px;color:var(--ek-navy);font-weight:800}
+
+/* ===== 影像墙 ===== */
+.ek-wall{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:130px;gap:14px}
+.ek-wall__cell{
+  position:relative;border-radius:14px;overflow:hidden;cursor:pointer;
+  transition:transform .22s,box-shadow .22s;
+}
+.ek-wall__cell:hover{transform:translateY(-3px);box-shadow:var(--ek-shadow)}
+.ek-wall__cell img{width:100%;height:100%;object-fit:cover}
+.ek-wall__cell span{
+  position:absolute;left:10px;bottom:10px;color:#fff;font-size:12px;font-weight:600;
+  text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:1;
+}
+.ek-wall__cell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(16,24,40,.7))}
+.ek-wall__cell--lg{grid-column:span 2;grid-row:span 2}
+.ek-wall__cell--md{grid-column:span 2}
+.ek-wall__cell--sm{grid-column:span 2}
+
+/* ===== 评价 ===== */
+.ek-voices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ek-voice{
+  background:#fff;border:1px solid var(--ek-line);border-left:4px solid var(--ek-sakura);
+  border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .22s,box-shadow .22s;
+}
+.ek-voice:hover{transform:translateY(-3px);box-shadow:var(--ek-shadow)}
+.ek-voice__text{font-size:13.8px;color:#3b4664;line-height:1.9}
+.ek-voice__who{display:flex;align-items:center;gap:10px;margin-top:auto}
+.ek-voice__who div{font-size:12.5px}
+.ek-voice__who b{display:block;color:var(--ek-navy);font-size:13px}
+.ek-voice__who small{color:var(--ek-grey)}
+.ek-voice__stars{color:var(--ek-gold);font-size:13px;letter-spacing:2px}
+
+/* ===== 深度解析 ===== */
+.ek-about{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:start}
+.ek-about__panel{
+  background:linear-gradient(155deg,var(--ek-navy) 0%,#24335a 100%);
+  border-radius:20px;padding:34px 30px;color:#dfe5f5;position:relative;overflow:hidden;
+}
+.ek-about__panel::after{
+  content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+  right:-70px;top:-70px;background:radial-gradient(circle,rgba(255,183,197,.30),transparent 70%);
+}
+.ek-about__panel h3{color:#fff;font-size:20px;margin-bottom:12px;position:relative}
+.ek-about__panel p{font-size:13.8px;line-height:1.95;color:#b9c4dd;position:relative;margin-bottom:16px}
+.ek-about__list{display:grid;gap:10px;position:relative}
+.ek-about__list li{font-size:13.2px;color:#cfd8ec;display:flex;gap:8px;align-items:flex-start}
+.ek-about__list li::before{content:"◆";color:var(--ek-gold);font-size:10px;line-height:2}
+.ek-about__text h2{font-size:clamp(23px,2.6vw,29px);color:var(--ek-navy);margin-bottom:16px;font-weight:800;line-height:1.35}
+.ek-about__text p{font-size:14.5px;color:#3f4b68;line-height:2;margin-bottom:14px}
+.ek-about__quote{
+  border-left:3px solid var(--ek-sakura-deep);background:#fff;border-radius:0 12px 12px 0;
+  padding:14px 18px;font-size:13.8px;color:#4a5674;line-height:1.9;margin:18px 0;
+}
+
+/* ===== 动态 ===== */
+.ek-timeline{display:grid;gap:0;max-width:860px}
+.ek-timeline__row{
+  display:grid;grid-template-columns:104px 1fr;gap:22px;padding:18px 0;
+  border-bottom:1px dashed var(--ek-line);
+}
+.ek-timeline__row:last-child{border-bottom:none}
+.ek-timeline__date{font-size:12.5px;color:var(--ek-grey);font-weight:600;padding-top:3px}
+.ek-timeline__body h3{font-size:15.5px;color:var(--ek-navy);font-weight:700;margin-bottom:5px}
+.ek-timeline__body p{font-size:13.3px;color:var(--ek-grey);line-height:1.8}
+.ek-timeline__tag{
+  display:inline-block;font-size:11px;background:var(--ek-soft);color:#4d5a78;
+  border-radius:999px;padding:1px 9px;margin-right:6px;font-weight:600;
+}
+
+/* ===== FAQ ===== */
+.ek-faq{max-width:880px;display:grid;gap:12px}
+.ek-faq details{
+  background:#fff;border:1px solid var(--ek-line);border-radius:12px;overflow:hidden;
+  transition:border-color .2s,box-shadow .2s;
+}
+.ek-faq details[open]{border-color:#c9d2e8;box-shadow:0 8px 20px rgba(22,31,54,.06)}
+.ek-faq summary{
+  list-style:none;cursor:pointer;padding:15px 20px;font-size:14.5px;font-weight:600;
+  color:var(--ek-navy);display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.ek-faq summary::-webkit-details-marker{display:none}
+.ek-faq summary::after{content:"+";font-size:19px;color:var(--ek-sakura-deep);font-weight:600;line-height:1}
+.ek-faq details[open] summary::after{content:"−"}
+.ek-faq details p{padding:0 20px 16px;font-size:13.5px;color:var(--ek-grey);line-height:1.9}
+
+/* ===== 合作与投稿 ===== */
+.ek-partner{display:flex;flex-wrap:wrap;gap:12px}
+.ek-partner span{
+  font-size:13px;color:#4d5a78;background:#fff;border:1px solid var(--ek-line);
+  border-radius:10px;padding:9px 18px;font-weight:500;transition:all .2s;
+}
+.ek-partner span:hover{border-color:var(--ek-sakura-deep);color:var(--ek-sakura-deep);transform:translateY(-2px)}
+.ek-cta{
+  margin-top:34px;background:linear-gradient(120deg,#1c2947 0%,#2b3d66 75%);
+  border-radius:20px;padding:38px 36px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;
+  align-items:center;position:relative;overflow:hidden;
+}
+.ek-cta::after{
+  content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-80px;bottom:-120px;
+  background:radial-gradient(circle,rgba(255,207,92,.22),transparent 70%);
+}
+.ek-cta h2{color:#fff;font-size:24px;font-weight:800;margin-bottom:10px;position:relative}
+.ek-cta p{color:#b6c1da;font-size:13.8px;line-height:1.9;position:relative}
+.ek-cta__btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;position:relative}
+
+/* ===== 页脚 ===== */
+.ek-footer{background:#0f1729;color:#93a0bd;padding:52px 0 26px;font-size:13px}
+.ek-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:36px;margin-bottom:34px}
+.ek-footer h4{color:#fff;font-size:14px;margin-bottom:14px;font-weight:700;letter-spacing:.5px}
+.ek-footer__brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ek-footer__brand .ek-logo__mark{width:38px;height:38px;border-radius:10px;background:#243154;box-shadow:none}
+.ek-footer p{line-height:1.95;font-size:12.8px;color:#8492b2}
+.ek-footer ul{display:grid;gap:8px}
+.ek-footer a{color:#93a0bd;transition:color .2s}
+.ek-footer a:hover{color:var(--ek-sakura)}
+.ek-footer__bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.3px;color:#6e7c9c;
+}
+
+/* ===== 浮层 / Toast / 弹窗 ===== */
+.ek-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);z-index:200;
+  background:rgba(22,31,54,.95);color:#fff;font-size:13.5px;padding:11px 22px;border-radius:999px;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+  box-shadow:0 14px 34px rgba(0,0,0,.35);
+}
+.ek-toast.is-show{opacity:1;transform:translate(-50%,0)}
+.ek-modal{
+  position:fixed;inset:0;z-index:150;display:none;place-items:center;padding:20px;
+  background:rgba(10,16,30,.62);backdrop-filter:blur(4px);
+}
+.ek-modal.is-open{display:grid}
+.ek-modal__box{
+  background:#fff;border-radius:18px;width:min(520px,94vw);max-height:86vh;overflow:auto;
+  padding:26px 26px 22px;box-shadow:0 30px 70px rgba(0,0,0,.4);animation:ekPop .22s ease;
+}
+@keyframes ekPop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.ek-modal__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.ek-modal__head h3{font-size:17px;color:var(--ek-navy);font-weight:800}
+.ek-modal__close{width:32px;height:32px;border-radius:50%;background:var(--ek-soft);display:grid;place-items:center;color:var(--ek-grey);font-size:17px;line-height:1}
+.ek-modal__box p{font-size:13.5px;color:var(--ek-grey);line-height:1.9;margin-bottom:12px}
+.ek-modal__field{
+  width:100%;border:1px solid var(--ek-line);border-radius:10px;padding:10px 13px;
+  font-size:13.5px;font-family:inherit;outline:none;margin-bottom:10px;background:var(--ek-mist);
+}
+.ek-modal__field:focus{border-color:var(--ek-sakura-deep);background:#fff}
+.ek-share-row{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0 4px}
+.ek-share-row button{
+  font-size:12.8px;color:#4d5a78;border:1px solid var(--ek-line);border-radius:999px;
+  padding:7px 16px;transition:all .2s;background:#fff;
+}
+.ek-share-row button:hover{border-color:var(--ek-sakura-deep);color:var(--ek-sakura-deep)}
+.ek-totop{
+  position:fixed;right:26px;bottom:26px;z-index:120;width:46px;height:46px;border-radius:14px;
+  background:var(--ek-navy);color:#fff;display:grid;place-items:center;
+  box-shadow:0 12px 28px rgba(22,31,54,.32);opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;
+}
+.ek-totop.is-show{opacity:1;pointer-events:auto}
+.ek-totop:hover{transform:translateY(-3px)}
+.ek-totop svg{width:20px;height:20px}
+
+/* ===== 响应式 ===== */
+@media (max-width:1040px){
+  .ek-focus-grid{grid-template-columns:1fr}
+  .ek-focus-side{grid-template-columns:1fr 1fr}
+  .ek-stream{grid-template-columns:1fr 1fr}
+  .ek-topic{grid-template-columns:1fr 1fr}
+  .ek-topic__item--wide{grid-column:span 2}
+  .ek-creators{grid-template-columns:1fr 1fr}
+  .ek-voices{grid-template-columns:1fr 1fr}
+  .ek-about{grid-template-columns:1fr}
+  .ek-wall{grid-template-columns:repeat(4,1fr)}
+  .ek-cta{grid-template-columns:1fr}
+  .ek-cta__btns{justify-content:flex-start}
+}
+@media (max-width:860px){
+  .ek-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;
+    flex-direction:column;padding:12px 6vw 18px;gap:4px;border-bottom:1px solid var(--ek-line);
+    box-shadow:0 18px 30px rgba(22,31,54,.10);
+  }
+  .ek-nav.is-open{display:flex}
+  .ek-nav__link{padding:11px 14px;border-radius:10px}
+  .ek-header__inner{position:relative}
+  .ek-burger{display:grid}
+  .ek-search{display:none}
+  .ek-hero__grid{grid-template-columns:1fr;gap:34px}
+  .ek-hero__stats{max-width:none}
+  .ek-announce__list{gap:20px}
+}
+@media (max-width:680px){
+  .ek-section{padding:52px 0}
+  .ek-stream{grid-template-columns:1fr}
+  .ek-focus-side{grid-template-columns:1fr}
+  .ek-creators{grid-template-columns:1fr}
+  .ek-voices{grid-template-columns:1fr}
+  .ek-topic{grid-template-columns:1fr}
+  .ek-topic__item--wide{grid-column:span 1}
+  .ek-wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}
+  .ek-wall__cell--lg,.ek-wall__cell--md,.ek-wall__cell--sm{grid-column:span 1;grid-row:span 1}
+  .ek-footer__grid{grid-template-columns:1fr 1fr;gap:26px}
+  .ek-announce__list{display:none}
+  .ek-hero{padding:40px 0 48px}
+  .ek-hero__stats{grid-template-columns:1fr 1fr}
+  .ek-timeline__row{grid-template-columns:1fr;gap:6px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="ek-sticky">
+  <div class="ek-announce">
+    <div class="ek-announce__inner">
+      <span class="ek-announce__tag">官方发布</span>
+      <ul class="ek-announce__list">
+        <li class="ek-announce__item">新增条目：<b>《首尔深夜厨房》</b>第 4 集上线，聚焦街头小馆的深夜温度</li>
+        <li class="ek-announce__item">专题企划：<b>「东京四季」</b>冬季篇开放投稿报名</li>
+        <li class="ek-announce__item">社区动态：<b>月度创作者榜单</b>11 月榜单已更新</li>
+      </ul>
+      <a class="ek-announce__more" href="#ek-dynamics">查看全部</a>
+    </div>
+  </div>
+
+  <header class="ek-header">
+    <div class="ek-header__inner ek-wrap">
+      <a class="ek-logo" href="#ek-top" aria-label="eeuss影院日韩官网首页">
+        <span class="ek-logo__mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5l11 7-11 7V5z" fill="#ffcf5c"/></svg>
+        </span>
+        <span class="ek-logo__text">
+          <span class="ek-logo__name">eeuss影院日韩</span>
+          <span class="ek-logo__sub">E E U S S · J P K R</span>
+        </span>
+      </a>
+
+      <nav class="ek-nav" id="ekNav">
+        <a class="ek-nav__link is-active" href="#ek-top">首页</a>
+        <a class="ek-nav__link" href="#ek-focus">焦点推荐</a>
+        <a class="ek-nav__link" href="#ek-stream">精品内容</a>
+        <a class="ek-nav__link" href="#ek-topics">专题企划</a>
+        <a class="ek-nav__link" href="#ek-creators">创作者</a>
+        <a class="ek-nav__link" href="#ek-dynamics">企业动态</a>
+        <a class="ek-nav__link" href="#ek-faq">帮助</a>
+        <a class="ek-nav__link" href="#ek-contact">联系</a>
+      </nav>
+
+      <div class="ek-header__right">
+        <div class="ek-search">
+          <input class="ek-search__input" id="ekSearchInput" type="text" placeholder="搜索日韩影像 · 创作者 · 专题" aria-label="站内搜索">
+          <button class="ek-search__btn" id="ekSearchBtn" aria-label="搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          </button>
+          <ul class="ek-search__hint" id="ekSearchHint"></ul>
+        </div>
+        <button class="ek-btn ek-btn--sakura" id="ekSubmitBtn" type="button">投稿入口</button>
+        <button class="ek-burger" id="ekBurger" aria-label="展开导航" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="ek-top">
+
+  <!-- 首屏 -->
+  <section class="ek-hero">
+    <div class="ek-wrap ek-hero__grid">
+      <div class="ek-hero__copy">
+        <span class="ek-hero__eyebrow"><i></i>官方网站 · 品牌视频门户</span>
+        <h1>eeuss影院日韩</h1>
+        <p class="ek-hero__slogan">把日韩影像里的生活感，讲给懂的人听</p>
+        <p class="ek-hero__desc">
+          作为持续运营的日韩影像品牌平台，eeuss影院日韩官方网站以原创与正版为底座，
+          汇聚城市探索、日常记录、人物访谈与创作幕后的精品内容。
+          我们相信影像不只是观看，更是理解另一种生活的入口——由企业与创作者共建的内容生态，
+          让每一次打开都值得信赖。
+        </p>
+        <div class="ek-hero__actions">
+          <a class="ek-btn ek-btn--sakura" href="#ek-focus">进入焦点推荐</a>
+          <a class="ek-btn ek-btn--ghost" href="#ek-about">了解品牌故事</a>
+        </div>
+        <div class="ek-hero__stats">
+          <div class="ek-stat">
+            <div class="ek-stat__num" data-count="1280">0<small>+</small></div>
+            <div class="ek-stat__label">精品内容条目</div>
+          </div>
+          <div class="ek-stat">
+            <div class="ek-stat__num" data-count="248">0<small>位</small></div>
+            <div class="ek-stat__label">签约创作者</div>
+          </div>
+          <div class="ek-stat">
+            <div class="ek-stat__num" data-count="36">0<small>万</small></div>
+            <div class="ek-stat__label">社区影迷</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ek-hero__visual">
+        <div class="ek-hero__frame">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%231a2542'/%3E%3Cstop offset='0.55' stop-color='%233b4a76'/%3E%3Cstop offset='1' stop-color='%23f0a2b4'/%3E%3C/linearGradient%3E%3ClinearGradient id='road' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23272f4a'/%3E%3Cstop offset='1' stop-color='%2313192c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23sky)'/%3E%3Ccircle cx='618' cy='128' r='46' fill='%23ffe0a8' opacity='0.92'/%3E%3Cpath d='M0 355 L800 300 L800 550 L0 550Z' fill='url(%23road)'/%3E%3Cpath d='M0 355 L800 300' stroke='%23ffcf5c' stroke-width='2' opacity='0.5'/%3E%3Cg fill='%23101828'%3E%3Crect x='70' y='215' width='90' height='150'/%3E%3Crect x='175' y='250' width='70' height='115'/%3E%3Crect x='560' y='205' width='100' height='150'/%3E%3Crect x='675' y='245' width='80' height='115'/%3E%3C/g%3E%3Cg fill='%23ffcf5c' opacity='0.85'%3E%3Crect x='84' y='234' width='14' height='14'/%3E%3Crect x='110' y='234' width='14' height='14'/%3E%3Crect x='84' y='262' width='14' height='14'/%3E%3Crect x='110' y='262' width='14' height='14'/%3E%3Crect x='578' y='226' width='14' height='14'/%3E%3Crect x='604' y='226' width='14' height='14'/%3E%3Crect x='578' y='254' width='14' height='14'/%3E%3C/g%3E%3Cg stroke='%23ffb7c5' stroke-width='3' opacity='0.6'%3E%3Cpath d='M250 330 q40 -26 84 0'/%3E%3Cpath d='M470 322 q46 -22 90 0'/%3E%3C/g%3E%3Crect x='350' y='380' width='100' height='6' rx='3' fill='%23ffb7c5' opacity='0.7'/%3E%3Ctext x='400' y='470' text-anchor='middle' font-family='sans-serif' font-size='26' fill='%23e8ecf8' opacity='0.85'%3E首尔 · 夜行记录%3C/text%3E%3C/svg%3E" alt="首尔夜间街景主题焦点影片封面，暖黄灯牌与樱花线路" width="800" height="550">
+        </div>
+        <span class="ek-hero__chip ek-hero__chip--tl"><span class="ek-dot-live"></span>本周焦点 · 夜行记录</span>
+        <span class="ek-hero__chip ek-hero__chip--br">首尔 → 东京 <b>· 2 城联动</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点推荐 -->
+  <section class="ek-section ek-anchor" id="ek-focus">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">FOCUS 焦点推荐</span>
+        <h2>本周焦点：日韩影像里的两种夜晚</h2>
+        <p>编辑团队每周从精品内容中挑选两条重点推荐与四条延伸阅读，覆盖城市探索、日常记录与人物访谈，兼顾深度与可看性。</p>
+      </div>
+
+      <div class="ek-focus-grid">
+        <article class="ek-card ek-card--hero">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='n1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f2b4a'/%3E%3Cstop offset='0.6' stop-color='%23435485'/%3E%3Cstop offset='1' stop-color='%23f27a96'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23n1)'/%3E%3Cg opacity='0.85' fill='%23ffd79a'%3E%3Ccircle cx='120' cy='130' r='5'/%3E%3Ccircle cx='200' cy='90' r='4'/%3E%3Ccircle cx='300' cy='150' r='6'/%3E%3Ccircle cx='640' cy='110' r='5'/%3E%3Ccircle cx='700' cy='170' r='4'/%3E%3C/g%3E%3Cpath d='M0 330 Q200 280 400 330 T800 320 L800 450 L0 450Z' fill='%2313192c'/%3E%3Cg fill='%230d1424'%3E%3Crect x='60' y='230' width='110' height='100'/%3E%3Crect x='200' y='265' width='80' height='65'/%3E%3Crect x='560' y='240' width='120' height='90'/%3E%3C/g%3E%3Cg fill='%23ffcf5c'%3E%3Crect x='76' y='248' width='12' height='12'/%3E%3Crect x='100' y='248' width='12' height='12'/%3E%3Crect x='76' y='272' width='12' height='12'/%3E%3Crect x='580' y='258' width='14' height='14'/%3E%3Crect x='606' y='258' width='14' height='14'/%3E%3C/g%3E%3Cpath d='M330 300 h140 v10 h-140z' fill='%23ffb7c5' opacity='0.75'/%3E%3Ctext x='400' y='400' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23f4f6fb' opacity='0.9'%3E夜行记录 · 首尔%3C/text%3E%3C/svg%3E" alt="首尔夜行记录焦点影片封面，城市剪影与暖色灯窗" width="800" height="450">
+            <span class="ek-cover__badge ek-cover__badge--sakura">重点推荐</span>
+            <span class="ek-cover__meta">18:42</span>
+            <span class="ek-cover__play" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l11 7-11 7V5z"/></svg></span></span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">《夜行记录·首尔》：从弘大到乙支路，走进凌晨两点的城市呼吸</h3>
+            <p class="ek-card__desc">一支 18 分钟的观察式短片。摄制组用三个凌晨跟拍便利店店员、便利店常客与深夜配送员，把镜头停在最普通的对话里，让城市在安静处显影。</p>
+            <div class="ek-card__tags">
+              <span class="ek-tag ek-tag--sakura">城市探索</span>
+              <span class="ek-tag">日常记录</span>
+              <span class="ek-tag">首尔</span>
+            </div>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini">
+                <span class="ek-avatar" style="background:#3b4a76">沈</span>沈望川 · 影像作者
+              </div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg>
+                  <b class="ek-act__num">1.2k</b>
+                </button>
+                <button class="ek-act" data-save type="button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg>
+                  <b>收藏</b>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="ek-focus-side">
+          <article class="ek-card ek-card--sm">
+            <div class="ek-cover">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220'%3E%3Crect width='320' height='220' fill='%23f6c9d2'/%3E%3Ccircle cx='252' cy='58' r='38' fill='%23fff2f5' opacity='0.85'/%3E%3Cpath d='M0 160 Q80 120 160 160 T320 150 L320 220 L0 220Z' fill='%23b9556f' opacity='0.8'/%3E%3Cg fill='%23ffffff' opacity='0.9'%3E%3Ccircle cx='70' cy='78' r='5'/%3E%3Ccircle cx='108' cy='104' r='3.5'/%3E%3Ccircle cx='176' cy='70' r='4'/%3E%3C/g%3E%3C/svg%3E" alt="东京四季冬季篇专题封面，粉白樱花与雪色街景" width="320" height="220">
+            </div>
+            <div class="ek-card__body">
+              <h3 class="ek-card__title">《东京四季·冬季篇》：一条街的十二种雪</h3>
+              <div class="ek-card__tags"><span class="ek-tag">专题企划</span></div>
+            </div>
+          </article>
+          <article class="ek-card ek-card--sm">
+            <div class="ek-cover">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220'%3E%3Crect width='320' height='220' fill='%23ffe7c2'/%3E%3Cpath d='M0 150 Q90 110 180 150 T320 140 L320 220 L0 220Z' fill='%23e2a35f'/%3E%3Crect x='40' y='56' width='90' height='74' rx='8' fill='%23fffaf0'/%3E%3Crect x='56' y='72' width='58' height='7' rx='3' fill='%23d98a3c'/%3E%3Crect x='56' y='90' width='42' height='6' rx='3' fill='%23e2a35f'/%3E%3Ccircle cx='242' cy='90' r='30' fill='%23f7a072' opacity='0.7'/%3E%3C/svg%3E" alt="深夜食堂菜单研究封面，暖橙色调与手写菜单纸片" width="320" height="220">
+            </div>
+            <div class="ek-card__body">
+              <h3 class="ek-card__title">深夜食堂的菜单研究：一份手写纸片的故事</h3>
+              <div class="ek-card__tags"><span class="ek-tag">美食烹饪</span></div>
+            </div>
+          </article>
+          <article class="ek-card ek-card--sm">
+            <div class="ek-cover">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220'%3E%3Crect width='320' height='220' fill='%232b3a5e'/%3E%3Cg fill='%23ffcf5c' opacity='0.9'%3E%3Crect x='44' y='120' width='10' height='40'/%3E%3Crect x='62' y='100' width='10' height='60'/%3E%3Crect x='80' y='130' width='10' height='30'/%3E%3C/g%3E%3Ccircle cx='228' cy='88' r='44' fill='%23ffb7c5' opacity='0.6'/%3E%3Cpath d='M0 170 Q100 140 200 170 T320 162 L320 220 L0 220Z' fill='%23141c2e'/%3E%3C/svg%3E" alt="音乐现场幕后封面，深蓝舞台与金色声波线条" width="320" height="220">
+            </div>
+            <div class="ek-card__body">
+              <h3 class="ek-card__title">独立乐队的排练室：一首歌被改过九次</h3>
+              <div class="ek-card__tags"><span class="ek-tag">创作幕后</span></div>
+            </div>
+          </article>
+          <article class="ek-card ek-card--sm">
+            <div class="ek-cover">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220'%3E%3Crect width='320' height='220' fill='%23d6e8e2'/%3E%3Cpath d='M0 168 Q70 120 150 168 T320 158 L320 220 L0 220Z' fill='%235f8f7f'/%3E%3Cg stroke='%232f5a4d' stroke-width='5' fill='none'%3E%3Cpath d='M60 150 q20 -60 40 0'/%3E%3Cpath d='M140 144 q24 -66 46 0'/%3E%3C/g%3E%3Ccircle cx='256' cy='66' r='28' fill='%23fff8e7' opacity='0.9'/%3E%3C/svg%3E" alt="城市公园散步指南封面，绿色草地与树影小径" width="320" height="220">
+            </div>
+            <div class="ek-card__body">
+              <h3 class="ek-card__title">城市公园散步指南：在午后三点遇见慢节奏</h3>
+              <div class="ek-card__tags"><span class="ek-tag">生活方式</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精品内容流 -->
+  <section class="ek-section ek-section--alt ek-anchor" id="ek-stream">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">CONTENT 精品内容</span>
+        <h2>持续更新的日韩影像片单</h2>
+        <p>按题材筛选，快速定位感兴趣的内容。每个条目均由编辑与创作者共同审核，确保画质与内容表达的品质一致。</p>
+      </div>
+
+      <div class="ek-filter" id="ekFilter">
+        <button class="ek-filter__btn is-on" data-filter="all" type="button">全部</button>
+        <button class="ek-filter__btn" data-filter="city" type="button">城市探索</button>
+        <button class="ek-filter__btn" data-filter="life" type="button">生活方式</button>
+        <button class="ek-filter__btn" data-filter="food" type="button">美食烹饪</button>
+        <button class="ek-filter__btn" data-filter="talk" type="button">人物访谈</button>
+      </div>
+
+      <div class="ek-stream" id="ekStream">
+
+        <article class="ek-card" data-cat="city">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231f2b4a'/%3E%3Cg fill='%23ffcf5c' opacity='0.85'%3E%3Crect x='40' y='150' width='18' height='60'/%3E%3Crect x='70' y='120' width='18' height='90'/%3E%3Crect x='100' y='160' width='18' height='50'/%3E%3Crect x='360' y='140' width='18' height='70'/%3E%3Crect x='390' y='118' width='18' height='92'/%3E%3C/g%3E%3Ccircle cx='240' cy='82' r='34' fill='%23ffb7c5' opacity='0.55'/%3E%3Cpath d='M0 210 Q120 180 240 210 T480 200 L480 270 L0 270Z' fill='%23131a2c'/%3E%3C/svg%3E" alt="京都清晨巷弄封面，石板路与木质町屋剪影" width="480" height="270">
+            <span class="ek-cover__badge">城市探索</span>
+            <span class="ek-cover__meta">12:08</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">京都清晨五点的巷弄：只有扫地和煮茶的声音</h3>
+            <p class="ek-card__desc">跟随在地向导走过三条老巷，记录町屋开门前的一小时。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#5f8f7f">藤</span>藤井有纪</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">842</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="life">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23eef1e6'/%3E%3Crect x='0' y='190' width='480' height='80' fill='%23c9d6bf'/%3E%3Crect x='60' y='70' width='120' height='120' rx='10' fill='%23fffdf6' stroke='%23c9d6bf' stroke-width='4'/%3E%3Crect x='84' y='96' width='72' height='8' rx='4' fill='%235f8f7f'/%3E%3Crect x='84' y='116' width='52' height='7' rx='3.5' fill='%23a9bfa0'/%3E%3Ccircle cx='330' cy='108' r='46' fill='%23f4d6a0' opacity='0.8'/%3E%3Cpath d='M240 190 q40 -54 80 0' stroke='%235f8f7f' stroke-width='5' fill='none'/%3E%3C/svg%3E" alt="极简收纳日常封面，米白书桌与绿植留白" width="480" height="270">
+            <span class="ek-cover__badge">生活方式</span>
+            <span class="ek-cover__meta">09:35</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">十平米房间的收纳哲学：把空间还给生活</h3>
+            <p class="ek-card__desc">从衣柜到厨房，一位东京租屋者的极简整理实测。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#c99e5a">奈</span>奈良美咲</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">1.0k</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="food">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23fff3e0'/%3E%3Cellipse cx='240' cy='196' rx='150' ry='40' fill='%23f0d3b0'/%3E%3Ccircle cx='240' cy='150' r='72' fill='%23fffaf0' stroke='%23e2a35f' stroke-width='6'/%3E%3Ccircle cx='240' cy='150' r='46' fill='%23e8a13c'/%3E%3Cg stroke='%23fff6e5' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M214 128 q26 18 52 0'/%3E%3Cpath d='M220 152 q20 14 40 0'/%3E%3C/g%3E%3Ccircle cx='384' cy='82' r='26' fill='%23f7a072' opacity='0.7'/%3E%3C/svg%3E" alt="大阪章鱼烧摊主的一天封面，圆形铁板与暖色酱汁" width="480" height="270">
+            <span class="ek-cover__badge">美食烹饪</span>
+            <span class="ek-cover__meta">15:20</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">大阪章鱼烧摊主的一天：从备料到收摊的十二小时</h3>
+            <p class="ek-card__desc">一份街头小吃背后的手艺、耐心与熟客关系。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#d9773f">梁</span>梁小满</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">936</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="talk">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%233b4a76'/%3E%3Ccircle cx='188' cy='126' r='54' fill='%23ffb7c5' opacity='0.9'/%3E%3Crect x='146' y='180' width='84' height='60' rx='26' fill='%23ffd6df'/%3E%3Ccircle cx='332' cy='126' r='54' fill='%23ffcf5c' opacity='0.9'/%3E%3Crect x='290' y='180' width='84' height='60' rx='26' fill='%23ffe9b8'/%3E%3Crect x='0' y='238' width='480' height='32' fill='%23222c47'/%3E%3C/svg%3E" alt="导演对谈面对面封面，双人剪影与暖色话筒" width="480" height="270">
+            <span class="ek-cover__badge">人物访谈</span>
+            <span class="ek-cover__meta">22:14</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">导演对谈：我们为什么总在拍「回家」这件事</h3>
+            <p class="ek-card__desc">两位日韩独立导演聊创作动机与拍摄现场的取舍。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#3b4a76">编</span>编辑部访谈组</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">1.4k</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="city">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23cfdff0'/%3E%3Ccircle cx='120' cy='80' r='30' fill='%23fff8e7' opacity='0.9'/%3E%3Cpath d='M0 190 L120 120 L240 190 L360 110 L480 190 L480 270 L0 270Z' fill='%236f8aa8'/%3E%3Cpath d='M0 210 L120 150 L240 210 L360 140 L480 210 L480 270 L0 270Z' fill='%234b6484'/%3E%3Cg fill='%23ffffff' opacity='0.7'%3E%3Ccircle cx='300' cy='70' r='4'/%3E%3Ccircle cx='352' cy='94' r='3'/%3E%3C/g%3E%3Crect x='0' y='244' width='480' height='26' fill='%23ffcf5c' opacity='0.5'/%3E%3C/svg%3E" alt="濑户内海小岛旅行见闻封面，蓝色海面与远山层次" width="480" height="270">
+            <span class="ek-cover__badge">城市探索</span>
+            <span class="ek-cover__meta">16:50</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">坐慢船去濑户内海：一个没有景点的岛的下午</h3>
+            <p class="ek-card__desc">旅行见闻与在地访谈，记录小岛上的三户人家。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#4f6f8f">周</span>周回舟</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">712</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="life">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f3e6d8'/%3E%3Crect x='54' y='60' width='130' height='150' rx='8' fill='%23fffaf3' stroke='%23d9b98f' stroke-width='4'/%3E%3Cg stroke='%23c99e5a' stroke-width='4' fill='none'%3E%3Cpath d='M74 96h90'/%3E%3Cpath d='M74 120h64'/%3E%3Cpath d='M74 144h80'/%3E%3C/g%3E%3Ccircle cx='330' cy='118' r='60' fill='%23c9d6bf' opacity='0.7'/%3E%3Cpath d='M240 210 q46 -70 92 0' stroke='%235f8f7f' stroke-width='6' fill='none'/%3E%3C/svg%3E" alt="手作陶艺工作室记录封面，木质台面与素陶器皿" width="480" height="270">
+            <span class="ek-cover__badge">生活方式</span>
+            <span class="ek-cover__meta">11:02</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">手作陶艺工作室的第七年：慢一点，反而更稳</h3>
+            <p class="ek-card__desc">一位创作者讲述从兴趣到持续运营的完整路径。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#b18453">宋</span>宋青禾</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">688</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="food">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e6f0ea'/%3E%3Crect x='0' y='170' width='480' height='100' fill='%23c3d8cc'/%3E%3Crect x='70' y='92' width='90' height='80' rx='8' fill='%23fffdf8' stroke='%23a9bfa0' stroke-width='4'/%3E%3Crect x='200' y='80' width='110' height='92' rx='8' fill='%23fff6e5' stroke='%23e2a35f' stroke-width='4'/%3E%3Ccircle cx='366' cy='112' r='38' fill='%23f7a072' opacity='0.7'/%3E%3Cg stroke='%235f8f7f' stroke-width='4' fill='none'%3E%3Cpath d='M96 130 q26 18 52 0'/%3E%3C/g%3E%3C/svg%3E" fill='none'/%3E%3C/svg%3E" alt="家庭便当的四季配色封面，浅绿台面与便当盒" width="480" height="270">
+            <span class="ek-cover__badge">美食烹饪</span>
+            <span class="ek-cover__meta">08:44</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">家庭便当的四季配色：用料理记录一年</h3>
+            <p class="ek-card__desc">实用技巧向的料理记录，附带一周备菜清单思路。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#5f8f7f">林</span>林可言</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">1.1k</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="talk">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23222c47'/%3E%3Ccircle cx='146' cy='118' r='46' fill='%23ffcf5c' opacity='0.88'/%3E%3Ccircle cx='330' cy='118' r='46' fill='%23ffb7c5' opacity='0.88'/%3E%3Cpath d='M146 168 h0' stroke='%23fff'/%3E%3Crect x='96' y='176' width='100' height='12' rx='6' fill='%23ffcf5c' opacity='0.6'/%3E%3Crect x='284' y='176' width='100' height='12' rx='6' fill='%23ffb7c5' opacity='0.6'/%3E%3Ctext x='240' y='236' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%23dfe5f5'%3E双城写作现场%3C/text%3E%3C/svg%3E" alt="编剧对谈封面，深色背景与双色人形图标" width="480" height="270">
+            <span class="ek-cover__badge">人物访谈</span>
+            <span class="ek-cover__meta">19:30</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">编剧对谈：短剧时代，如何把故事讲得更真实</h3>
+            <p class="ek-card__desc">行业观察与创作方法论，两位编剧现场拆解结构。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#8a6fbf">编</span>编辑部访谈组</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">905</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ek-card" data-cat="city">
+          <div class="ek-cover ek-cover--169">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f6e9d7'/%3E%3Crect x='0' y='186' width='480' height='84' fill='%23d8c3a5'/%3E%3Cpath d='M60 186 L140 74 L220 186Z' fill='%238a6f57'/%3E%3Cpath d='M250 186 L330 92 L410 186Z' fill='%23a88a6b'/%3E%3Cg fill='%23fffaf0'%3E%3Crect x='96' y='132' width='14' height='20'/%3E%3Crect x='292' y='140' width='14' height='20'/%3E%3C/g%3E%3Cg stroke='%23a88a6b' stroke-width='4' fill='none'%3E%3Cpath d='M150 210 q40 -22 80 0'/%3E%3C/g%3E%3C/svg%3E" alt="奈良老街半日徒步封面，木造老屋与暖色街面" width="480" height="270">
+            <span class="ek-cover__badge">城市探索</span>
+            <span class="ek-cover__meta">13:26</span>
+          </div>
+          <div class="ek-card__body">
+            <h3 class="ek-card__title">奈良老街半日徒步：走完一条有手艺的街道</h3>
+            <p class="ek-card__desc">在地文化向的深度漫游，拜访三家老铺与一位匠人。</p>
+            <div class="ek-card__foot">
+              <div class="ek-author-mini"><span class="ek-avatar" style="background:#8a6f57">贺</span>贺川野</div>
+              <div class="ek-actions">
+                <button class="ek-act" data-like type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0112 8a3.7 3.7 0 017 2.7C19 15.6 12 20 12 20z"/></svg><b class="ek-act__num">604</b></button>
+                <button class="ek-act" data-save type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v16l-6-4-6 4V4z"/></svg><b>收藏</b></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="ek-section ek-anchor" id="ek-topics">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">SERIES 专题企划</span>
+        <h2>四个长期企划，构成平台的内容骨架</h2>
+        <p>每个专题都是一个持续更新的单元，由编辑团队牵头，联合创作者共同完成。部分专题开放投稿报名，欢迎参与共创。</p>
+      </div>
+
+      <div class="ek-topic">
+        <article class="ek-topic__item ek-topic__item--wide">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 300'%3E%3Crect width='560' height='300' fill='%232b3a5e'/%3E%3Ccircle cx='440' cy='80' r='54' fill='%23ffb7c5' opacity='0.5'/%3E%3Cg fill='%23ffcf5c' opacity='0.8'%3E%3Crect x='60' y='150' width='16' height='80'/%3E%3Crect x='88' y='122' width='16' height='108'/%3E%3Crect x='116' y='160' width='16' height='70'/%3E%3C/g%3E%3Cpath d='M0 232 Q140 200 280 232 T560 224 L560 300 L0 300Z' fill='%23141c2e'/%3E%3Ctext x='280' y='278' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%23dfe5f5'%3E东京四季 · 冬季篇%3C/text%3E%3C/svg%3E" alt="东京四季冬季篇专题大图，深蓝城市与粉色雪意" width="560" height="300">
+          <div class="ek-topic__body">
+            <span class="ek-topic__state">更新至第 6 期 · 投稿报名中</span>
+            <h3>东京四季 · 冬季篇</h3>
+            <p>以一年为周期记录同一座城市的季节变化，冬季篇聚焦年末街景、家庭料理与跨年仪式。</p>
+          </div>
+        </article>
+
+        <article class="ek-topic__item">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 300'%3E%3Crect width='280' height='300' fill='%23e9f0e8'/%3E%3Cpath d='M0 214 L140 116 L280 214 L280 300 L0 300Z' fill='%236f9b83'/%3E%3Ccircle cx='212' cy='72' r='30' fill='%23fff8e7' opacity='0.9'/%3E%3Cg stroke='%232f5a4d' stroke-width='5' fill='none'%3E%3Cpath d='M60 208 q26 -58 52 0'/%3E%3C/g%3E%3C/svg%3E" alt="山与海之间专题封面，绿色地形与日出" width="280" height="300">
+          <div class="ek-topic__body">
+            <span class="ek-topic__state">更新至第 11 期</span>
+            <h3>山与海之间</h3>
+            <p>户外活动与自然观察系列，记录海岸线、山道与营地。</p>
+          </div>
+        </article>
+
+        <article class="ek-topic__item">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 300'%3E%3Crect width='280' height='300' fill='%23f2e3ea'/%3E%3Crect x='44' y='90' width='192' height='130' rx='12' fill='%23fffaf5' stroke='%23e0b7c4' stroke-width='5'/%3E%3Ccircle cx='140' cy='155' r='34' fill='%23f27a96' opacity='0.75'/%3E%3Cpath d='M140 121 v68 M106 155 h68' stroke='%23fff' stroke-width='6'/%3E%3C/svg%3E" alt="一个人的工作室专题封面，粉白画框与加号图形" width="280" height="300">
+          <div class="ek-topic__body">
+            <span class="ek-topic__state">更新至第 5 期</span>
+            <h3>一个人的工作室</h3>
+            <p>创作幕后系列，走进独立创作者的工作空间与日常。</p>
+          </div>
+        </article>
+
+        <article class="ek-topic__item">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 300'%3E%3Crect width='280' height='300' fill='%23dbe6f2'/%3E%3Crect x='34' y='70' width='212' height='150' rx='10' fill='%23f8fbff' stroke='%237f9ab8' stroke-width='5'/%3E%3Cg stroke='%237f9ab8' stroke-width='4'%3E%3Cpath d='M58 106h164'/%3E%3Cpath d='M58 136h120'/%3E%3Cpath d='M58 166h144'/%3E%3C/g%3E%3C/svg%3E" alt="字幕之外专题封面，浅蓝稿纸与文字行" width="280" height="300">
+          <div class="ek-topic__body">
+            <span class="ek-topic__state">新一期筹备中</span>
+            <h3>字幕之外</h3>
+            <p>文化访谈系列，聊语言、翻译与影像表达的落差。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="ek-section ek-section--alt ek-anchor" id="ek-creators">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">CREATORS 创作者矩阵</span>
+        <h2>与四位长期创作者一起，把内容做得更耐久</h2>
+        <p>我们坚持与创作者建立长期合作，从选题、拍摄到后期提供完整支持。以下为平台当前重点合作的创作者档案。</p>
+      </div>
+
+      <div class="ek-creators">
+        <article class="ek-creator">
+          <div class="ek-creator__avatar" style="background:linear-gradient(135deg,#3b4a76,#6a7cad)">沈</div>
+          <h3 class="ek-creator__name">沈望川</h3>
+          <p class="ek-creator__field">城市探索 · 观察式纪录</p>
+          <p class="ek-creator__bio">前新闻摄影记者，擅长在夜间与街角寻找叙事。作品节奏克制，讲究现场声。</p>
+          <div class="ek-creator__nums"><div><b>86</b>作品</div><div><b>12.4万</b>关注</div></div>
+        </article>
+        <article class="ek-creator">
+          <div class="ek-creator__avatar" style="background:linear-gradient(135deg,#c99e5a,#e8c98f)">奈</div>
+          <h3 class="ek-creator__name">奈良美咲</h3>
+          <p class="ek-creator__field">生活方式 · 家居收纳</p>
+          <p class="ek-creator__bio">在东京生活的整理顾问，用日常影像分享小空间里的秩序与松弛。</p>
+          <div class="ek-creator__nums"><div><b>64</b>作品</div><div><b>9.8万</b>关注</div></div>
+        </article>
+        <article class="ek-creator">
+          <div class="ek-creator__avatar" style="background:linear-gradient(135deg,#5f8f7f,#8fbfa8)">梁</div>
+          <h3 class="ek-creator__name">梁小满</h3>
+          <p class="ek-creator__field">美食烹饪 · 手艺记录</p>
+          <p class="ek-creator__bio">餐饮食谱研究者，专注街头小吃与家庭料理的做法复原与现场记录。</p>
+          <div class="ek-creator__nums"><div><b>112</b>作品</div><div><b>15.1万</b>关注</div></div>
+        </article>
+        <article class="ek-creator">
+          <div class="ek-creator__avatar" style="background:linear-gradient(135deg,#8a6fbf,#b9a4e0)">贺</div>
+          <h3 class="ek-creator__name">贺川野</h3>
+          <p class="ek-creator__field">在地文化 · 人物访谈</p>
+          <p class="ek-creator__bio">长期走访地方手艺人，擅长把复杂的地方经验整理成清晰可看的叙事。</p>
+          <div class="ek-creator__nums"><div><b>47</b>作品</div><div><b>7.2万</b>关注</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像墙 -->
+  <section class="ek-section">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">GALLERY 影像墙</span>
+        <h2>来自社区的九帧日常</h2>
+        <p>影像墙每周更新一次，收录创作者上传的作品封面与环境照片，主题围绕日常记录与在地观察。</p>
+      </div>
+
+      <div class="ek-wall">
+        <div class="ek-wall__cell ek-wall__cell--lg">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f0e2d0'/%3E%3Crect x='60' y='140' width='280' height='160' rx='10' fill='%23fffaf2' stroke='%23c9a37c' stroke-width='6'/%3E%3Cg stroke='%23c9a37c' stroke-width='5' fill='none'%3E%3Cpath d='M92 196h216'/%3E%3Cpath d='M92 232h160'/%3E%3C/g%3E%3Ccircle cx='308' cy='96' r='34' fill='%23e2a35f' opacity='0.7'/%3E%3C/svg%3E" alt="手写菜谱与木质桌面的静物影像" width="400" height="400">
+          <span>手写菜谱 · 静物</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--md">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%233b4a76'/%3E%3Cg fill='%23ffcf5c' opacity='0.8'%3E%3Crect x='50' y='140' width='14' height='70'/%3E%3Crect x='74' y='112' width='14' height='98'/%3E%3Crect x='98' y='150' width='14' height='60'/%3E%3C/g%3E%3Ccircle cx='312' cy='86' r='42' fill='%23ffb7c5' opacity='0.55'/%3E%3C/svg%3E" alt="深夜街角便利店灯光的城市影像" width="400" height="260">
+          <span>街角 02:14</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--sm">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23d8e8e0'/%3E%3Cpath d='M0 190 Q120 150 240 190 T400 182 L400 260 L0 260Z' fill='%236f9b83'/%3E%3Ccircle cx='300' cy='70' r='34' fill='%23fff9e8' opacity='0.9'/%3E%3Cg stroke='%232f5a4d' stroke-width='4' fill='none'%3E%3Cpath d='M80 186 q24 -52 48 0'/%3E%3C/g%3E%3C/svg%3E" alt="山道徒步途中的绿色草坡影像" width="400" height="260">
+          <span>山道 · 午后</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--sm">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23f5dcd6'/%3E%3Ccircle cx='140' cy='120' r='58' fill='%23fffaf4' stroke='%23e0a08c' stroke-width='6'/%3E%3Ccircle cx='140' cy='120' r='28' fill='%23f27a96' opacity='0.7'/%3E%3Ccircle cx='292' cy='150' r='42' fill='%23f7bfae' opacity='0.8'/%3E%3C/svg%3E" alt="家庭便当摆盘的暖色记录影像" width="400" height="260">
+          <span>便当 · 配色</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--md">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23eef0f6'/%3E%3Crect x='60' y='60' width='120' height='150' rx='6' fill='%23fff' stroke='%23b9c2d6' stroke-width='5'/%3E%3Cg stroke='%23b9c2d6' stroke-width='4'%3E%3Cpath d='M82 96h76'/%3E%3Cpath d='M82 122h52'/%3E%3Cpath d='M82 148h64'/%3E%3C/g%3E%3Ccircle cx='300' cy='120' r='52' fill='%23c9d6bf' opacity='0.8'/%3E%3C/svg%3E" alt="工作室桌面与分镜稿纸的影像" width="400" height="260">
+          <span>分镜 · 桌面</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--sm">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%231f2b4a'/%3E%3Ccircle cx='200' cy='130' r='62' fill='none' stroke='%23ffcf5c' stroke-width='6'/%3E%3Cpath d='M182 104l44 26-44 26z' fill='%23ffcf5c'/%3E%3C/svg%3E" alt="深色播放符号与夜间影像主题封面" width="400" height="260">
+          <span>片头 · 试作</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--lg">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23cfe0ef'/%3E%3Ccircle cx='120' cy='100' r='36' fill='%23fff8e7' opacity='0.9'/%3E%3Cpath d='M0 250 L120 168 L240 250 L360 156 L400 190 L400 400 L0 400Z' fill='%236f8aa8'/%3E%3Cpath d='M0 290 L120 214 L240 290 L360 206 L400 240 L400 400 L0 400Z' fill='%234b6484'/%3E%3C/svg%3E" alt="海边小岛远眺的层叠山影影像" width="400" height="400">
+          <span>小岛 · 远眺</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--sm">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23f3e6d8'/%3E%3Ccircle cx='150' cy='130' r='58' fill='%23c99e5a' opacity='0.85'/%3E%3Ccircle cx='150' cy='130' r='30' fill='%23fffaf3'/%3E%3Crect x='250' y='76' width='76' height='110' rx='8' fill='%23fffaf3' stroke='%23d9b98f' stroke-width='5'/%3E%3C/svg%3E" alt="素陶器皿与拉坯台的手作记录影像" width="400" height="260">
+          <span>拉坯 · 第七年</span>
+        </div>
+        <div class="ek-wall__cell ek-wall__cell--md">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23222c47'/%3E%3Cg fill='%23ffcf5c' opacity='0.85'%3E%3Ccircle cx='120' cy='90' r='5'/%3E%3Ccircle cx='168' cy='122' r='4'/%3E%3Ccircle cx='250' cy='80' r='5'/%3E%3Ccircle cx='312' cy='130' r='4'/%3E%3C/g%3E%3Cpath d='M0 200 Q100 170 200 200 T400 192 L400 260 L0 260Z' fill='%23141c2e'/%3E%3C/svg%3E" alt="音乐现场演出光点的夜色影像" width="400" height="260">
+          <span>现场 · 第九次修改</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区评价 -->
+  <section class="ek-section ek-section--alt">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">VOICES 社区之声</span>
+        <h2>来自影迷与创作者的六段真实反馈</h2>
+        <p>口碑来自长期的细节积累。以下是社区成员对内容、工具与运营服务的公开评价，均来自站内反馈入口。</p>
+      </div>
+
+      <div class="ek-voices">
+        <article class="ek-voice">
+          <div class="ek-voice__stars">★★★★★</div>
+          <p class="ek-voice__text">看《夜行记录·首尔》的时候我正好在加班，凌晨两点的便利店镜头让我突然松了一口气。这种不急着给结论的片子，现在真的不多。</p>
+          <div class="ek-voice__who"><span class="ek-avatar" style="background:#3b4a76">陈</span><div><b>陈屿</b><small>社区影迷 · 3 年</small></div></div>
+        </article>
+        <article class="ek-voice">
+          <div class="ek-voice__stars">★★★★★</div>
+          <p class="ek-voice__text">作为投稿作者说一句，编辑给的修改意见很具体，不是那种模板式回复。一条片子来回改了三轮，最后成片我自己也满意。</p>
+          <div class="ek-voice__who"><span class="ek-avatar" style="background:#5f8f7f">苏</span><div><b>苏禾</b><small>投稿创作者</small></div></div>
+        </article>
+        <article class="ek-voice">
+          <div class="ek-voice__stars">★★★★☆</div>
+          <p class="ek-voice__text">专题的结构做得很清楚，四季企划我基本每期都追。唯一希望冬季篇能加一点拍摄手记，想知道他们怎么处理雪天收音。</p>
+          <div class="ek-voice__who"><span class="ek-avatar" style="background:#c99e5a">周</span><div><b>周叙白</b><small>影像爱好者</small></div></div>
+        </article>
+        <article class="ek-voice">
+          <div class="ek-voice__stars">★★★★★</div>
+          <p class="ek-voice__text">收纳那期我照着做了，真的有用。它没有讲什么大道理，就是把十个平方怎么摆讲清楚，这种实用内容太难得。</p>
+          <div class="ek-voice__who"><span class="ek-avatar" style="background:#8a6fbf">何</span><div><b>何小满</b><small>生活方式关注者</small></div></div>
+        </article>
+        <article class="ek-voice">
+          <div class="ek-voice__stars">★★★★☆</div>
+          <p class="ek-voice__text">搜索和筛选挺顺手，标签分类也不乱。如果作者主页能按年份归档就更好了，翻老片会方便很多。</p>
+          <div class="ek-voice__who"><span class="ek-avatar" style="background:#4f6f8f">李</span><div><b>李知远</b><small>社区影迷 · 1 年</small></div></div>
+        </article>
+        <article class="ek-voice">
+          <div class="ek-voice__stars">★★★★★</div>
+          <p class="ek-voice__text">参加过两期专题共创，从报名到成片流程透明，进度也都有更新。作为一个社区，能做到持续运营并且守住品质，确实值得信赖。</p>
+          <div class="ek-voice__who"><span class="ek-avatar" style="background:#d9773f">吴</span><div><b>吴见山</b><small>专题共创作者</small></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌故事与深度解析 -->
+  <section class="ek-section ek-anchor" id="ek-about">
+    <div class="ek-wrap">
+      <div class="ek-about">
+        <aside class="ek-about__panel">
+          <h3>品牌档案 · 一页读懂</h3>
+          <p>eeuss影院日韩是一个围绕日韩影像展开的内容品牌，官方网站承载内容发布、创作者合作与社区交流三类核心功能。</p>
+          <ul class="ek-about__list">
+            <li>定位：日韩影像内容与创作者社区</li>
+            <li>内容：城市探索、日常记录、人物访谈、创作幕后</li>
+            <li>机制：编辑审核 + 创作者共创 + 社区反馈</li>
+            <li>原则：原创、正版、高清、可追溯</li>
+            <li>服务：投稿支持、选题共创、版权说明</li>
+          </ul>
+        </aside>
+
+        <div class="ek-about__text">
+          <h2>关于 eeuss影院日韩：一个把「日常」当作方法的内容品牌</h2>
+          <p>
+            eeuss影院日韩起步于一个很朴素的判断：关于日本与韩国的影像内容很多，但真正愿意停下来观察普通人生活的作品并不多。
+            我们于是把「日常记录」当成方法，而不是风格——走进街区、厨房、工作室与车站，
+            用足够长的时间等待一个真实的瞬间，而不是用足够快的剪辑制造情绪。
+            作为官方网站，这里既发布平台自制内容，也承载创作者投稿与专题共创，
+            让内容生态在多方参与中保持活力。
+          </p>
+          <p>
+            在内容结构上，平台分为四条主线：城市探索关注空间与人之间的关系；生活方式记录日常经验与实用技巧；
+            美食烹饪从手艺与食材出发，讲一道菜背后的生活逻辑；人物访谈则把镜头交给导演、编剧、匠人与普通从业者。
+            四条线彼此交叉，构成一个可以长期深耕的垂直领域内容体系。
+            我们不追求单条内容的爆量，更在意内容的耐久度——一年后再看，它是否依然成立。
+          </p>
+          <div class="ek-about__quote">
+            我们更愿意把「eeuss影院日韩」理解成一个持续运营的观察现场：有编辑的判断，有创作者的表达，也有社区成员的不同意见。它们共同构成了这个平台的品质底线。
+          </div>
+          <p>
+            为了保证内容品质，平台建立了三道流程。第一道是选题会，编辑团队每月梳理社区反馈与投稿方向，确定专题与重点片单；
+            第二道是制作支持，为合作创作者提供拍摄建议、后期协助与版权核查；
+            第三道是发布后的复盘，根据社区评论与数据表现调整后续内容比例。
+            这套机制并不复杂，但它让内容生产从「一次性」变成「可持续」。
+          </p>
+          <p>
+            在社区层面，我们坚持用户至上的原则：投稿入口保持开放，反馈渠道保持透明，争议内容有明确的处理说明。
+            平台同时承担相应的社会责任，在涉及在地文化、历史叙述与人物隐私的内容上设置额外审核环节，
+            并在页面中标注素材来源与拍摄背景。我们相信，真实是内容最有力量的部分，而真实需要被认真对待。
+          </p>
+          <p>
+            未来一年，eeuss影院日韩将重点推进三件事：扩大多元创作者的合作范围，尤其是地方创作者与独立团队；
+            完善专题共创的报名与协作流程；以及把影像墙做成一个可持续更新的社区档案。
+            我们希望这个官方网站不只是一个入口，而是品牌与社区共同成长的记录本。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + FAQ + 合作联系 -->
+  <section class="ek-section ek-section--alt ek-anchor" id="ek-dynamics">
+    <div class="ek-wrap">
+      <div class="ek-sec-head">
+        <span class="ek-sec-head__tag">NEWS 企业动态</span>
+        <h2>官方发布与内容更新记录</h2>
+        <p>内容排期、专题进度、社区规则调整与活动报名信息，都会在这里以官方发布形式同步更新。</p>
+      </div>
+
+      <div class="ek-timeline">
+        <div class="ek-timeline__row">
+          <div class="ek-timeline__date">2026 / 11 / 16</div>
+          <div class="ek-timeline__body">
+            <h3><span class="ek-timeline__tag">内容更新</span>《夜行记录·首尔》第四集上线</h3>
+            <p>本集聚焦乙支路的深夜配送员，片长 18 分 42 秒，同步开放社区讨论区。</p>
+          </div>
+        </div>
+        <div class="ek-timeline__row">
+          <div class="ek-timeline__date">2026 / 11 / 11</div>
+          <div class="ek-timeline__body">
+            <h3><span class="ek-timeline__tag">专题报名</span>「东京四季·冬季篇」共创报名开启</h3>
+            <p>面向社区创作者开放 20 个名额，报名需提交一份 60 秒以内的观察片段与拍摄说明。</p>
+          </div>
+        </div>
+        <div class="ek-timeline__row">
+          <div class="ek-timeline__date">2026 / 11 / 06</div>
+          <div class="ek-timeline__body">
+            <h3><span class="ek-timeline__tag">品牌动态</span>创作者合作计划升级，新增后期支持</h3>
+            <p>合作创作者可申请剪辑与调色协助，同时平台将提供统一的素材版权核查清单。</p>
+          </div>
+        </div>
+        <div class="ek-timeline__row">
+          <div class="ek-timeline__date">2026 / 10 / 28</div>
+          <div class="ek-timeline__body">
+            <h3><span class="ek-timeline__tag">社区规则</span>社区反馈处理流程更新说明</h3>
+            <p>新增反馈分类与处理时限说明，涉及内容纠错的反馈将在三个工作日内回应。</p>
+          </div>
+        </div>
+        <div class="ek-timeline__row">
+          <div class="ek-timeline__date">2026 / 10 / 15</div>
+          <div class="ek-timeline__body">
+            <h3><span class="ek-timeline__tag">官方发布</span>影像墙正式上线，每周更新一次</h3>
+            <p>影像墙收录创作者上传的封面与环境照片，首批开放九个展示位并支持提交作品。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ek-sec-head" id="ek-faq" style="margin-top:56px">
+        <span class="ek-sec-head__tag">FAQ 帮助中心</span>
+        <h2>关于投稿、版权与社区的常见问题</h2>
+      </div>
+
+      <div class="ek-faq">
+        <details>
+          <summary>如何向平台投稿自己的影像作品？</summary>
+          <p>可通过页面右上角「投稿入口」提交。需要填写作品名称、时长、拍摄地点与简要说明，并上传封面。首次投稿建议附一段 60 秒以内的样片，便于编辑判断内容方向是否匹配。</p>
+        </details>
+        <details>
+          <summary>平台对内容版权有什么具体要求？</summary>
+          <p>投稿作品需为原创或已获得完整授权，涉及音乐、素材、人物肖像的部分需提供来源说明。平台会在发布前进行版权核查，并在必要时要求补充授权材料。转载或二次剪辑内容需注明原始出处。</p>
+        </details>
+        <details>
+          <summary>专题共创的报名流程是怎样的？</summary>
+          <p>每个专题开放报名时会在企业动态中发布说明，包含主题方向、名额与提交要求。报名后由编辑团队评估，入选者会进入共创沟通群，按阶段完成拍摄与交付。</p>
+        </details>
+        <details>
+          <summary>为什么部分内容标注了拍摄背景说明？</summary>
+          <p>涉及在地文化、历史叙述或特定人物的内容，平台会补充拍摄背景与素材来源说明，帮助观众理解语境，也便于内容在后续传播中保持准确。</p>
+        </details>
+        <details>
+          <summary>社区反馈多久会得到回应？</summary>
+          <p>一般反馈会在三个工作日内回应；涉及内容纠错、版权争议或社区规则问题的反馈，会进入专项处理流程，并在处理完成后同步结果说明。</p>
+        </details>
+        <details>
+          <summary>能否申请使用平台内容进行教学或研究？</summary>
+          <p>可以在联系页面提交使用说明，注明用途、范围与期限。教学与研究用途在符合版权要求的前提下可以协商授权，商业用途需另行沟通。</p>
+        </details>
+      </div>
+
+      <div class="ek-sec-head" id="ek-contact" style="margin-top:56px">
+        <span class="ek-sec-head__tag">PARTNERS 合作与联系</span>
+        <h2>合作品牌与联系入口</h2>
+      </div>
+
+      <div class="ek-partner">
+        <span>城市影像档案馆</span>
+        <span>青禾手作联盟</span>
+        <span>濑户内海影像节</span>
+        <span>独立放映计划</span>
+        <span>在地创作者联盟</span>
+        <span>慢船旅行工作室</span>
+      </div>
+
+      <div class="ek-cta">
+        <div>
+          <h2>把你看到的日常，交给更多人看见</h2>
+          <p>无论你手上是一段十分钟的观察短片，还是一张有故事的街角照片，都欢迎通过官方渠道投稿。我们更在意真实的表达，而不是完美的技巧。</p>
+        </div>
+        <div class="ek-cta__btns">
+          <button class="ek-btn ek-btn--sakura" id="ekSubmitBtn2" type="button">投稿入口</button>
+          <button class="ek-btn ek-btn--ghost" id="ekShareBtn" type="button">分享本页</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ek-footer">
+  <div class="ek-wrap">
+    <div class="ek-footer__grid">
+      <div>
+        <div class="ek-footer__brand">
+          <span class="ek-logo__mark">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5l11 7-11 7V5z" fill="#ffcf5c"/></svg>
+          </span>
+          <strong style="color:#fff;font-size:15px">eeuss影院日韩</strong>
+        </div>
+        <p>eeuss影院日韩官方网站，聚焦日韩影像的内容品牌与创作者社区。坚持原创与正版，持续运营，为影迷提供高品质、可长期回看的内容生态。</p>
+      </div>
+      <div>
+        <h4>内容板块</h4>
+        <ul>
+          <li><a href="#ek-focus">焦点推荐</a></li>
+          <li><a href="#ek-stream">精品内容</a></li>
+          <li><a href="#ek-topics">专题企划</a></li>
+          <li><a href="#ek-creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于平台</h4>
+        <ul>
+          <li><a href="#ek-about">品牌故事</a></li>
+          <li><a href="#ek-dynamics">企业动态</a></li>
+          <li><a href="#ek-faq">帮助中心</a></li>
+          <li><a href="#ek-contact">合作联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>商务合作：brand@eeuss-daily.example</li>
+          <li>投稿事务：creator@eeuss-daily.example</li>
+          <li>工作时间：周一至周五 10:00–18:00</li>
+          <li>内容纠错：在帮助中心提交反馈</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ek-footer__bottom">
+      <span>© 2026 eeuss影院日韩 官方网站 · 版权所有 · 内容持续更新中</span>
+      <span>品牌备案：EEUSS-JPKR-2026 · 社区守则与版权说明</span>
+    </div>
+  </div>
+</footer>
+
+<button class="ek-totop" id="ekToTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="ek-toast" id="ekToast" role="status" aria-live="polite"></div>
+
+<div class="ek-modal" id="ekModal">
+  <div class="ek-modal__box" role="dialog" aria-modal="true" aria-labelledby="ekModalTitle">
+    <div class="ek-modal__head">
+      <h3 id="ekModalTitle">投稿入口</h3>
+      <button class="ek-modal__close" id="ekModalClose" aria-label="关闭">×</button>
+    </div>
+    <div id="ekModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var toastEl = document.getElementById('ekToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2100);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('ekBurger');
+  var nav = document.getElementById('ekNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.classList.contains('ek-nav__link')){
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      Array.prototype.forEach.call(nav.querySelectorAll('.ek-nav__link'), function(a){
+        a.classList.remove('is-active');
+      });
+      e.target.classList.add('is-active');
+    }
+  });
+
+  /* 搜索 */
+  var searchInput = document.getElementById('ekSearchInput');
+  var searchBtn = document.getElementById('ekSearchBtn');
+  var searchHint = document.getElementById('ekSearchHint');
+  var searchData = [
+    {t:'夜行记录·首尔', s:'城市探索'},
+    {t:'东京四季·冬季篇', s:'专题企划'},
+    {t:'京都清晨五点的巷弄', s:'城市探索'},
+    {t:'家庭便当的四季配色', s:'美食烹饪'},
+    {t:'编剧对谈', s:'人物访谈'},
+    {t:'一个人的工作室', s:'专题企划'}
+  ];
+  function renderHint(kw){
+    var list = searchData.filter(function(d){
+      return !kw || d.t.indexOf(kw) > -1 || d.s.indexOf(kw) > -1;
+    }).slice(0,5);
+    if(!list.length){
+      searchHint.innerHTML = '<li>未找到匹配内容，试试「首尔」「便当」或「专题」</li>';
+    } else {
+      searchHint.innerHTML = list.map(function(d){
+        return '<li>' + d.t + '<span>' + d.s + '</span></li>';
+      }).join('');
+    }
+    searchHint.classList.add('is-open');
+  }
+  searchInput.addEventListener('input', function(){ renderHint(searchInput.value.trim()); });
+  searchInput.addEventListener('focus', function(){ renderHint(searchInput.value.trim()); });
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      doSearch();
+    }
+  });
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    var hit = searchData.some(function(d){ return d.t.indexOf(kw) > -1 && kw; });
+    if(!kw){
+      showToast('请输入搜索关键词');
+      return;
+    }
+    if(hit){
+      showToast('已为你定位到相关内容：' + kw);
+      searchHint.classList.remove('is-open');
+      document.getElementById('ek-stream').scrollIntoView({behavior:'smooth'});
+    } else {
+      showToast('暂无匹配的「' + kw + '」，看看焦点推荐吧');
+      document.getElementById('ek-focus').scrollIntoView({behavior:'smooth'});
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchHint.addEventListener('click', function(e){
+    var li = e.target.closest('li');
+    if(li){ searchInput.value = li.textContent.replace(/[^\u4e00-\u9fa5A-Za-z0-9·：]/g,'').slice(0,20); searchHint.classList.remove('is-open'); doSearch(); }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.ek-search')){ searchHint.classList.remove('is-open'); }
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-like]');
+    if(likeBtn){
+      var numEl = likeBtn.querySelector('.ek-act__num');
+      var txt = numEl.textContent;
+      var val = parseFloat(txt);
+      var unit = txt.replace(/[\d.]/g,'');
+      if(likeBtn.classList.contains('is-liked')){
+        likeBtn.classList.remove('is-liked');
+        val = Math.max(0, val - 0.1);
+        showToast('已取消点赞');
+      } else {
+        likeBtn.classList.add('is-liked');
+        val = val + 0.1;
+        showToast('点赞成功，感谢你的支持');
+      }
+      numEl.textContent = (Math.round(val * 10) / 10) + unit;
+      return;
+    }
+    var saveBtn = e.target.closest('[data-save]');
+    if(saveBtn){
+      var on = saveBtn.classList.toggle('is-saved');
+      saveBtn.querySelector('b').textContent = on ? '已收藏' : '收藏';
+      showToast(on ? '已加入收藏夹' : '已取消收藏');
+    }
+  });
+
+  /* 标签筛选 */
+  var filterBox = document.getElementById('ekFilter');
+  var stream = document.getElementById('ekStream');
+  filterBox.addEventListener('click', function(e){
+    var btn = e.target.closest('.ek-filter__btn');
+    if(!btn) return;
+    Array.prototype.forEach.call(filterBox.querySelectorAll('.ek-filter__btn'), function(b){
+      b.classList.remove('is-on');
+    });
+    btn.classList.add('is-on');
+    var cat = btn.getAttribute('data-filter');
+    Array.prototype.forEach.call(stream.querySelectorAll('.ek-card'), function(card){
+      var match = (cat === 'all' || card.getAttribute('data-cat') === cat);
+      card.classList.toggle('is-hide', !match);
+    });
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-count]');
+  function animate(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var small = el.querySelector('small');
+    var unitHTML = small ? small.outerHTML : '';
+    var start = null;
+    var dur = 1200;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      el.innerHTML = val + unitHTML;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animate(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.5});
+    Array.prototype.forEach.call(counters, function(c){ io.observe(c); });
+  } else {
+    Array.prototype.forEach.call(counters, animate);
+  }
+
+  /* 弹窗 */
+  var modal = document.getElementById('ekModal');
+  var modalTitle = document.getElementById('ekModalTitle');
+  var modalBody = document.getElementById('ekModalBody');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('is-open');
+  }
+  function closeModal(){ modal.classList.remove('is-open'); }
+  document.getElementById('ekModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  var submitFormHTML =
+    '<p>填写简要信息，编辑团队会在三个工作日内与你联系。请确保作品为原创或已获授权。</p>' +
+    '<input class="ek-modal__field" type="text" placeholder="作品名称" aria-label="作品名称">' +
+    '<input class="ek-modal__field" type="text" placeholder="联系方式（邮箱或社交账号）" aria-label="联系方式">' +
+    '<input class="ek-modal__field" type="text" placeholder="作品时长与拍摄地点" aria-label="作品时长与拍摄地点">' +
+    '<textarea class="ek-modal__field" rows="3" placeholder="一句话说明你的作品想表达什么" aria-label="作品说明"></textarea>' +
+    '<button class="ek-btn ek-btn--sakura" id="ekFakeSubmit" type="button" style="width:100%;justify-content:center">提交投稿</button>';
+
+  function bindSubmit(){
+    var fake = document.getElementById('ekFakeSubmit');
+    if(fake){
+      fake.addEventListener('click', function(){
+        showToast('投稿已提交，感谢你的参与');
+        closeModal();
+      });
+    }
+  }
+  document.getElementById('ekSubmitBtn').addEventListener('click', function(){
+    openModal('投稿入口', submitFormHTML);
+    bindSubmit();
+  });
+  document.getElementById('ekSubmitBtn2').addEventListener('click', function(){
+    openModal('投稿入口', submitFormHTML);
+    bindSubmit();
+  });
+
+  /* 分享 / 复制链接 */
+  document.getElementById('ekShareBtn').addEventListener('click', function(){
+    openModal('分享本页',
+      '<p>把 eeuss影院日韩官方网站分享给同样喜欢日韩影像的朋友。</p>' +
+      '<div class="ek-share-row">' +
+        '<button type="button" data-share="微信">微信</button>' +
+        '<button type="button" data-share="微博">微博</button>' +
+        '<button type="button" data-share="QQ">QQ</button>' +
+        '<button type="button" data-share="复制链接">复制链接</button>' +
+      '</div>' +
+      '<p style="margin-top:10px">分享后请在平台内确认链接有效性。</p>');
+  });
+  modal.addEventListener('click', function(e){
+    var b = e.target.closest('[data-share]');
+    if(!b) return;
+    var type = b.getAttribute('data-share');
+    if(type === '复制链接'){
+      var link = location.href;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          showToast('链接已复制到剪贴板');
+        }).catch(function(){
+          showToast('复制失败，请手动复制地址栏链接');
+        });
+      } else {
+        showToast('当前环境不支持自动复制，请手动复制地址栏链接');
+      }
+    } else {
+      showToast('已生成' + type + '分享提示，请前往' + type + '粘贴链接');
+    }
+  });
+
+  /* 作者信息弹窗 */
+  var authorMap = {
+    '沈望川':{f:'城市探索 · 观察式纪录',b:'前新闻摄影记者，擅长在夜间与街角寻找叙事。作品节奏克制，讲究现场声。',n:'86 作品 / 12.4 万关注'},
+    '奈良美咲':{f:'生活方式 · 家居收纳',b:'在东京生活的整理顾问，用日常影像分享小空间里的秩序与松弛。',n:'64 作品 / 9.8 万关注'},
+    '梁小满':{f:'美食烹饪 · 手艺记录',b:'餐饮食谱研究者，专注街头小吃与家庭料理的做法复原与现场记录。',n:'112 作品 / 15.1 万关注'},
+    '贺川野':{f:'在地文化 · 人物访谈',b:'长期走访地方手艺人，擅长把复杂的地方经验整理成清晰可看的叙事。',n:'47 作品 / 7.2 万关注'},
+    '编辑':{f:'平台编辑团队',b:'负责选题策划、内容审核与专题运营，是平台内容生态的组织者与守门人。',n:'平台账号'}
+  };
+  document.addEventListener('click', function(e){
+    var mini = e.target.closest('.ek-author-mini');
+    if(!mini) return;
+    var name = mini.textContent.trim().split('·')[0].replace(/\s/g,'');
+    var info = null;
+    Object.keys(authorMap).forEach(function(k){
+      if(name.indexOf(k) > -1) info = authorMap[k];
+    });
+    if(!info){
+      info = {f:'社区创作者',b:'持续在平台发布日韩影像相关内容，欢迎关注。',n:'作者主页可查看全部作品'};
+    }
+    openModal('作者档案',
+      '<p style="color:#26304a;font-weight:700;font-size:15px">' + (name || '社区创作者') + '</p>' +
+      '<p>擅长领域：' + info.f + '</p>' +
+      '<p>' + info.b + '</p>' +
+      '<p style="color:#f27a96;font-weight:600">' + info.n + '</p>' +
+      '<button class="ek-btn ek-btn--ghost" type="button" id="ekFollowBtn" style="width:100%;justify-content:center;margin-top:8px">关注该创作者</button>');
+    var fbtn = document.getElementById('ekFollowBtn');
+    if(fbtn){
+      fbtn.addEventListener('click', function(){
+        showToast('已关注，后续更新将出现在你的动态中');
+        closeModal();
+      });
+    }
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('ekToTop');
+  window.addEventListener('scroll', function(){
+    toTop.classList.toggle('is-show', window.scrollY > 600);
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+              </html>
